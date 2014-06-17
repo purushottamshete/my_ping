@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+			<!-- CDN File -->
+			<!-- Latest compiled and minified CSS -->
+			<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+
+			<!-- Optional theme -->
+			<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">-->
+
+			<!-- Latest compiled and minified JavaScript -->
+			<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+
+			<!-- Google CDN for Jquery -->
+			<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+
+			<!-- LOCAL FILES -->
+			<!-- Custom css and js-->
+			<link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.min.css">
+			<!--<link rel="stylesheet" href="bootstrap-3.1.1-dist/bootstrap-theme.min.css">-->
+			<link rel="stylesheet" href="stylesheet/mystylesheet.css">
+
+			<script src="javascript/jquery-1.11.1.min.js"></script>
+			<script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+			<script src="javascript/myjavascript.js"></script>
+			
+
+
+	</head>
+
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	      <div class="container">
+
+	        <div class="navbar-header">
+	            <a class="navbar-brand" href="index.html">MyPing</a>
+	        </div><!-- Nav Header -->
+
+	        <ul class="nav navbar-nav navbar-right">
+        		<li><a data-toggle="modal" data-target="#myModal">Contact</a></li>
+        	</ul>
+
+	      </div><!-- Container -->
+	    </div>
+
+	    <div class="container">	
+			<ul class="nav nav-tabs" id="myTab">
+			  <li class="active"><a href="#ping" data-toggle="tab">Ping</a></li>
+			  <li><a href="#Traceroute" data-toggle="tab">Traceroute</a></li>
+			  <li><a href="#DNSLookup" data-toggle="tab">DNSLookup</a></li>
+			  <li><a href="#Performance" data-toggle="tab">Performance</a></li>
+			</ul>
+
+			<div class="tab-content">
+			  <div class="tab-pane active" id="ping">
+			  		<h4> 	Add host to get ping details </h4>
+			  		<div class="col-md-10">
+			  			<div class="col-md-5">
+			  				<form class="form-inline" role="form">
+			  					<div class="form-group">
+				  					<input type="url" class="form-control" id="hostname" placeholder="Hostname">
+				  					<button type="button" class="btn btn-default" id="addhost">+</button>
+			  					</div>
+			  				</form>
+			  			</div>
+			  		</div>
+
+			  		<div class="col-md-10">
+			  			<br>
+			  			<h4 id="ajax">Wass Up</h4>
+			  			<table class="table table-condensed" id="iptable" >
+			  				<thead>
+				  				<tr>
+				  					<th>Host</td>
+				  					<th>Ip Address</td>
+				  					<th>RTT(ms)</td>
+				  					<th>Success</td>
+				  					<th>Failed</td>
+				  					<th>TTL(ms)</td>
+				  					<th>Status</td>
+				  					<th>Remove</td>
+				  				</tr>
+			  				</thead>
+
+			  				<tbody>
+			  				</tbody>
+			  			
+			  			</table>
+			  		</div>
+
+			  </div>
+
+			  <div class="tab-pane" id="Traceroute">
+			  		<h1> Profile </h1>
+			  </div>
+
+			  <div class="tab-pane" id="DNSLookup">
+			  		<h1> Message </h1>
+			  </div>
+
+			  <div class="tab-pane" id="Performance">
+			  		<h1> settings </h1>
+			  </div>
+			</div>
+		</div> <!-- container -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Contact</h4>
+		      </div>
+		      <div class="modal-body">
+		      		<div class="container">
+			        	<p><i class="glyphicon glyphicon-user"></i> Purushottam Shete</p>
+			        	<p><i class="glyphicon glyphicon-envelope"></i> purushottamshete@gmail.com</p>
+			        	<p><i class="glyphicon glyphicon-phone"></i> +91 96199 11039</p>
+		        	</div>
+
+		      </div>
+		      <div class="modal-footer">
+		      	<h6> <i class="glyphicon glyphicon-copyright-mark"></i> Copyright 2014-15
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </h6>
+		      </div>
+		    </div>
+		  </div>
+		</div> <!-- Modal -->
+
+	</body>
+</html>	
