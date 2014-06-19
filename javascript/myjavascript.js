@@ -18,9 +18,19 @@ $(document).ready(function(){
 		$(".btnDelete").bind("click", Delete);
 
 
-		$.get("php/command.php",function(data,status){
+		$.get("perl/perl.cgi",{ name: hostname}, function(data,status){
     			alert("Data: " + data + "\nStatus: " + status);
   		});
+  		
+                if ( data = /ttl=([0-9]*)/ )
+                {
+                var ttl = $1;
+                var str = "<tr> <td> "+hostname+"</td> <td> "+ipaddress+"</td> <td> "+rtt+"</td> <td> "+success+"</td> <td> "+failed+"</td>     <td> "+ttl+"</td> <td> "+status+"</td> <td><img src='images/delete.png' class='btnDelete'/></td> </tr>";
+                $("#iptable thead").append(str);
+                $(".btnDelete").bind("click", Delete);
+
+                 }
+
 
   	});
 
